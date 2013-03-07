@@ -27,10 +27,20 @@ exports['awesome'] = {
     // setup here
     done();
   },
-  'no args': function(test) {
-    test.expect(1);
+  'start': function(test) {
+    test.expect(2);
     // tests here
-    test.equal(perfreqs.awesome(), 'awesome', 'should be awesome.');
+    var pr = perfreqs();
+    var _bind = pr.bind;
+    pr.bind = function () {
+      return true;
+    };
+
+    test.equal(pr.status(), "off", "should be off");
+    pr.start();
+    test.equal(pr.status(), "on", "should be on");
     test.done();
+
+    pr.bind = _bind;
   },
 };
