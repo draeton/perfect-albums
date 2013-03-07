@@ -6,8 +6,10 @@ Request/store perfect albums.
 Install the module with: `npm install perfreqs`
 
 ```javascript
-var perfreqs = require('perfreqs');
-perfreqs.awesome(); // "awesome"
+var perfreqs = require("./lib/perfreqs");
+var pr = perfreqs();
+
+pr.start(); // starts web service
 ```
 
 ## Documentation
@@ -23,5 +25,5 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 _(Nothing yet)_
 
 ## License
-Copyright (c) 2013 draeton  
+Copyright (c) 2013 draeton
 Licensed under the MIT license.
