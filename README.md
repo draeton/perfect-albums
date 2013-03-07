@@ -6,10 +6,11 @@ Request/store perfect albums.
 Install the module with: `npm install perfreqs`
 
 ```javascript
-var perfreqs = require("./lib/perfreqs");
-var pr = perfreqs();
+var perfectAlbums = require("./lib/perfect-albums");
 
-pr.start(); // starts web service
+var app = perfectAlbums(function (app) {
+	app.start();
+}); // starts web service
 ```
 
 ## Documentation
