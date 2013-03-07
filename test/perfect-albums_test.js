@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-var perfreqs = require('../lib/perfreqs.js');
+var perfectAlbums = require("../lib/perfect-albums");
 
 /*
   ======== A Handy Little Nodeunit Reference ========
@@ -24,23 +24,14 @@ var perfreqs = require('../lib/perfreqs.js');
 
 exports['awesome'] = {
   setUp: function(done) {
-    // setup here
     done();
   },
   'start': function(test) {
-    test.expect(2);
-    // tests here
-    var pr = perfreqs();
-    var _bind = pr.bind;
-    pr.bind = function () {
-      return true;
-    };
+    var app = perfectAlbums(function (app) {
+      test.equal(app.ready, true, "should be true");
+      test.done();
+    });
 
-    test.equal(pr.status(), "off", "should be off");
-    pr.start();
-    test.equal(pr.status(), "on", "should be on");
-    test.done();
-
-    pr.bind = _bind;
+    test.equal(app.ready, false, "should be false");
   },
 };

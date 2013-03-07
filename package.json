@@ -21,7 +21,7 @@
       "url": "https://github.com/draeton/perfreqs/blob/master/LICENSE-MIT"
     }
   ],
-  "main": "lib/perfreqs",
+  "main": "lib/perfect-albums",
   "engines": {
     "node": ">= 0.6.0",
     "npm": "1.2.12"
@@ -31,7 +31,8 @@
   },
   "dependencies": {
     "express": "~3.1.0",
-    "redis-url": "0.1.0"
+    "mongodb" : "~1.1.11",
+    "mongoose": "~3.5.7"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "~0.1.1",

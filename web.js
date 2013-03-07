@@ -4,7 +4,8 @@
 
 "use strict";
 
-var perfreqs = require("./lib/perfreqs");
-var pr = perfreqs();
+var perfectAlbums = require("./lib/perfect-albums");
 
-pr.start();
+var app = perfectAlbums(function (app) {
+	app.start();
+});
