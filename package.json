@@ -30,7 +30,8 @@
     "test": "grunt nodeunit"
   },
   "dependencies": {
-    "express": "~3.1.0"
+    "express": "~3.1.0",
+    "redis": "1.2.11"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "~0.1.1",
