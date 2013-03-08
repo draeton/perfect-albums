@@ -1,6 +1,6 @@
 # perfreqs
 
-Request/store perfect albums.
+RESTful web service for what I consider to be perfect albums in node.js
 
 ## Getting Started
 Install the module with: `npm install perfreqs`

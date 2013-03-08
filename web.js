@@ -4,8 +4,6 @@
 
 "use strict";
 
-var perfectAlbums = require("./lib/perfect-albums");
+var PerfectAlbums = require("./lib/perfect-albums.js");
 
-var app = perfectAlbums(function (app) {
-	app.start();
-});
+var app = new PerfectAlbums();
